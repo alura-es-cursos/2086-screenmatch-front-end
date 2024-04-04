@@ -1,0 +1,65 @@
+body {
+    background-size: cover;
+    background-image: linear-gradient(180.61deg,
+            #000000e3 25.16%,
+            #04254fc4 80%,
+            #409ecdcb 100%);
+    padding: 5em;
+    height: 100%;
+    min-height: 100vh;
+    /* Define la altura como 100vh para ocupar toda la pantalla */
+}
+
+
+.ficha img {
+    margin: 0 3em 2em 0;
+}
+
+.ficha-descripcion {
+    display: flex;
+}
+
+.ficha-descripcion div {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.episodios-lista {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+p {
+    font-size: 22px;
+}
+
+select,
+option {
+    font-size: 24px;
+    padding: 0 1em;
+    margin-bottom: 1em;
+}
+
+select {
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    width: 10%;
+}
+
+@media screen and (max-width: 900px) {
+
+    .ficha-descripcion,
+    .episodios-lista {
+        display: block;
+    }
+}

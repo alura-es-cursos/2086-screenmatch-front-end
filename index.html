@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Screenmatch</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="./img/logo.png" alt="Logo ScreenMatch">
+            <h1>Screen match</h1>
+            <select data-categorias>
+                <option value="todos">Categorias</option>
+                <option value="comedia">Comedia</option>
+                <option value="acción">Acción</option>
+                <option value="crimen">Crimen</option>
+                <option value="drama">Drama</option>
+                <option value="aventura">Aventura</option>
+            </select>
+        </div>
+
+        <div class="header__opciones">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+
+            <span class="material-symbols-outlined">
+                notifications
+            </span>
+
+            <span class="material-symbols-outlined">
+                account_circle
+            </span>
+        </div>
+    </header>
+
+    <main>
+        <section data-name="lanzamientos" class="section">
+            <h2>
+                Lanzamientos en ScreenMatch
+            </h2>
+
+
+        </section>
+
+        <section data-name="top5" class="section">
+            <h2>
+                Títulos populares en ScreenMatch
+            </h2>
+
+        </section>
+
+        <section data-name="series" class="section">
+            <h2>
+                Títulos en ScreenMatch
+            </h2>
+        </section>
+
+        <section data-name="categoria" class="hidden pesquisa">
+            <h2>Títulos en ScreenMatch</h2>
+        </section>
+    </main>
+    <script src="./scripts/index.js" type="module"></script>
+</body>
+
+</html>

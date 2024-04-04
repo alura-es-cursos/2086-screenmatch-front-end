@@ -1,0 +1,89 @@
+body {
+    background: linear-gradient(180.61deg,
+            #000000 25.16%,
+            #04254f 80%,
+            #409ecd 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+h1 {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+select,
+option {
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    padding: 0 1em;
+}
+
+select {
+    border: none;
+    outline: none;
+}
+
+
+h2 {
+    color: white;
+}
+
+main {
+    padding: 0 3em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 3em;
+}
+
+.header__logo {
+    display: flex;
+    gap: 1em;
+}
+
+.header__logo img {
+    width: 150px;
+    height: 50px;
+}
+
+.material-symbols-outlined {
+    color: white;
+    font-size: 48px
+}
+
+.lista {
+    list-style-type: none;
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 1em;
+}
+
+.lista li img {
+    width: 300px;
+    height: 444px;
+}
+
+.pesquisa {
+
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 1600px) {
+    .lista {
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+
+
+}

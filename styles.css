@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.dropdown-select {
+    width: 30%;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    height: 40px; 
+    line-height: 20px; 
+    font-size: 16px;
+    color: #62717a;
+    text-shadow: 0 1px white;
+    background: #f2f2f2;
+  }
