@@ -29,6 +29,11 @@ function cargarTemporadas() {
             optionTodos.value = 'todas';
             optionTodos.textContent = 'Todas las temporadas'
             listaTemporadas.appendChild(optionTodos); 
+
+            const optionTop = document.createElement('option');
+            optionTop.value = 'top';
+            optionTop.textContent = 'Top 5 episodios'
+            listaTemporadas.appendChild(optionTop);  
         })
         .catch(error => {
             console.error('Error al obtener temporadas:', error);
@@ -66,6 +71,31 @@ function cargarEpisodios() {
             console.error('Error al obtener episodios:', error);
         });
 }
+function cargarTopEpisodios() {
+    getDatos(`/series/${serieId}/temporadas/top`)
+    .then(data => {
+        fichaSerie.innerHTML = ''; 
+            const ul = document.createElement('ul');
+            ul.className = 'episodios-lista';
+
+            const listaHTML = data.map(serie => `
+                <li>
+                    Episódio ${serie.numeroEpisodio} - Temporada ${serie.temporada} - ${serie.titulo}
+                </li>
+            `).join('');
+            ul.innerHTML = listaHTML;
+            
+            const paragrafo = document.createElement('p');
+            const linha = document.createElement('br');
+            fichaSerie.appendChild(paragrafo);
+            fichaSerie.appendChild(linha);
+            fichaSerie.appendChild(ul);
+
+        })
+    .catch(error => {
+        console.error('Erro ao obter episódios:', error);
+    });
+}
 
 // Funcion para cargar informaciones de la serie
 function cargarInfoSerie() {
@@ -88,8 +118,16 @@ function cargarInfoSerie() {
         });
 }
 
+
+
 // Adiciona escuchador de evento para el elemento select
-listaTemporadas.addEventListener('change', cargarEpisodios);
+listaTemporadas.addEventListener('change', function() {
+    if (listaTemporadas.value === 'top') {
+        cargarTopEpisodios()
+    } else {
+        cargarEpisodios()
+    }
+});
 
 // Carga las informaciones de la série y las temporadas cuando la página carga
 cargarInfoSerie();
